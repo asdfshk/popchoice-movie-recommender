@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@500;700&display=swap");
+
+
+:root {
+    --bg-start: #06113d;
+    --bg-end: #03113a;
+    --card-bg: #00195c;
+    --ink: #f4f7ff;
+    --muted: #c2cbe8;
+    --field-bg: #5f70a8;
+    --field-ink: #edf2ff;
+    --field-placeholder: #d5dcf2;
+    --cta: #57d889;
+    --cta-hover: #47c97a;
+    --cta-text: #00195a;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+}
+
+
+body {
+    font-family: "Nunito", "Segoe UI", sans-serif;
+    color: var(--ink);
+    background:
+        radial-gradient(circle at 20% 10%, #163384 0%, transparent 35%),
+        radial-gradient(circle at 90% 90%, #0e2c74 0%, transparent 38%),
+        linear-gradient(175deg, var(--bg-start) 0%, var(--bg-end) 100%);
+}
+
+
+.app {
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 28px 16px;
+}
+
+
+.card {
+    width: min(92vw, 560px);
+    min-height: auto;
+    padding: 22px 16px 28px;
+    background: var(--card-bg);
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
+}
+
+
+.hero {
+    margin-top: 2px;
+    text-align: center;
+}
+
+
+.logo {
+    font-size: 66px;
+    line-height: 1;
+}
+
+
+.title {
+    margin: 2px 0 0;
+    font-family: "Baloo 2", cursive;
+    font-size: 56px;
+    line-height: 0.96;
+    letter-spacing: 0.4px;
+}
+
+
+.movie-form {
+    margin-top: 22px;
+}
+
+
+.question-block {
+    margin-bottom: 26px;
+}
+
+
+.question {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 35px;
+    font-family: "Baloo 2", cursive;
+    line-height: 1.02;
+    letter-spacing: 0.2px;
+}
+
+
+textarea {
+    width: 100%;
+    border: 0;
+    border-radius: 12px;
+    background: var(--field-bg);
+    color: var(--field-ink);
+    padding: 11px 12px;
+    resize: none;
+    font-size: 23px;
+    line-height: 1.2;
+    font-family: "Nunito", "Segoe UI", sans-serif;
+}
+
+
+textarea::placeholder {
+    color: var(--field-placeholder);
+}
+
+
+textarea:focus {
+    outline: 2px solid #95affc;
+    outline-offset: 2px;
+}
+
+
+.cta {
+    width: 100%;
+    margin-top: 2px;
+    border: 0;
+    border-radius: 11px;
+    background: var(--cta);
+    color: var(--cta-text);
+    padding: 13px 16px;
+    font-family: "Baloo 2", cursive;
+    font-size: 50px;
+    line-height: 1;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+
+.cta:hover {
+    background: var(--cta-hover);
+}
+
+
+.cta:active {
+    transform: translateY(1px);
+}
+
+
+@media (max-width: 420px) {
+    .title {
+        font-size: 52px;
+    }
+
+
+    .question {
+        font-size: 31px;
+    }
+
+
+    textarea {
+        font-size: 21px;
+    }
+
+
+    .cta {
+        font-size: 46px;
+    }
+}
+
+
+/* Hide utility */
+.hidden {
+    display: none !important;
+}
+
+
+/* Result card */
+.result {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem 0;
+}
+
+
+.result-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.2;
+}
+
+
+.result-description {
+    font-size: 1rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+}
+
+
+/* Green variant for Go Again button */
+.cta--green {
+    background-color: #4ade80;
+    color: #0f172a;
+}
+
+
+/* Loader */
+.loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2.5rem 0;
+}
+
+.popcorn-bounce {
+  font-size: 64px;
+  animation: bounce 0.6s infinite alternate ease-in-out;
+}
+
+.loader-text {
+  font-family: "Baloo 2", cursive;
+  font-size: 1.5rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+@keyframes bounce {
+  from { transform: translateY(0px);   }
+  to   { transform: translateY(-16px); }
+}

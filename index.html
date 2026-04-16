@@ -1,0 +1,132 @@
+<!-- <!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>PopChoice</title>
+        <link rel="stylesheet" href="index.css" />
+    </head>
+    <body>
+        <main class="app">
+            <section class="card">
+                <header class="hero">
+                    <div class="logo" aria-hidden="true">🍿</div>
+                    <h1 class="title">PopChoice</h1>
+                </header>
+
+                <form class="movie-form">
+                    <div class="question-block">
+                        <label class="question" for="favoriteMovie">What's your favorite movie and why?</label>
+                        <textarea
+                            id="favoriteMovie"
+                            name="favoriteMovie"
+                            rows="3"
+                            placeholder="The Shawshank Redemption&#10;Because it taught me to never give up hope no matter how hard life gets"
+                        ></textarea>
+                    </div>
+
+                    <div class="question-block">
+                        <label class="question" for="movieEra">Are you in the mood for something new or a classic?</label>
+                        <textarea
+                            id="movieEra"
+                            name="movieEra"
+                            rows="2"
+                            placeholder="I want to watch movies that were released after 1990"
+                        ></textarea>
+                    </div>
+
+                    <div class="question-block">
+                        <label class="question" for="movieTone">Do you wanna have fun or do you want something serious?</label>
+                        <textarea
+                            id="movieTone"
+                            name="movieTone"
+                            rows="2"
+                            placeholder="I want to watch something stupid and fun"
+                        ></textarea>
+                    </div>
+
+                    <button class="cta" type="submit">Let's Go</button>
+                </form>
+            </section>
+        </main>
+
+        <script type="module" src="index.js"></script>
+    </body>
+</html>  -->
+
+
+
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PopChoice</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="card">
+
+        <!-- HEADER (always visible) -->
+        <header class="hero">
+          <div class="logo" aria-hidden="true">🍿</div>
+          <h1 class="title">PopChoice</h1>
+        </header>
+
+        <!-- FORM (hidden after submit) -->
+        <form class="movie-form" id="movieForm">
+          <div class="question-block">
+            <label class="question" for="favoriteMovie">What's your favorite movie and why?</label>
+            <textarea
+              id="favoriteMovie"
+              name="favoriteMovie"
+              rows="3"
+              placeholder="The Shawshank Redemption&#10;Because it taught me to never give up hope no matter how hard life gets"
+            ></textarea>
+          </div>
+
+          <div class="question-block">
+            <label class="question" for="movieEra">Are you in the mood for something new or a classic?</label>
+            <textarea
+              id="movieEra"
+              name="movieEra"
+              rows="2"
+              placeholder="I want to watch movies that were released after 1990"
+            ></textarea>
+          </div>
+
+          <div class="question-block">
+            <label class="question" for="movieTone">Do you wanna have fun or do you want something serious?</label>
+            <textarea
+              id="movieTone"
+              name="movieTone"
+              rows="2"
+              placeholder="I want to watch something stupid and fun"
+            ></textarea>
+          </div>
+
+          <button class="cta" type="submit">Let's Go</button>
+        </form>
+
+        <!-- LOADER (hidden by default) -->
+        <div class="loader hidden" id="loader">
+         <div class="popcorn-bounce" aria-hidden="true">🍿</div>
+        <p class="loader-text">Finding your movie...</p>
+        </div>
+
+
+        <!-- RESULT (hidden by default, shown after response) -->
+        <div class="result hidden" id="resultCard">
+          <h2 class="result-title" id="resultTitle"></h2>
+          <h4 class="result-description" id="resultDescription"></h4>
+          <button class="cta cta--green" id="goAgainBtn">Go Again</button>
+        </div>
+
+      </section>
+    </main>
+
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
