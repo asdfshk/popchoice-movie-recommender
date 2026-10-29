@@ -67,7 +67,3 @@ popchoice movie/
 ├── vite.config.js
 └── package.json
 ```
-
-## Notes
-
-Scaffold from a Scrimba AI Engineer Path exercise; the RAG pipeline, strict JSON prompt, and UI state machine are tailored for this project.
